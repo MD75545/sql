@@ -1,0 +1,34 @@
+SELECT *from employees;
+SELECT first_name, last_name,salary,12*salary+100 from employees;
+SELECT first_name, last_name,salary,salary+100 from employees;
+SELECT first_name, last_name,salary,12*(salary+100) from employees;
+SELECT last_name As name,commission_pct comm from employees;
+SELECT last_name "Name",salary*12 "Annual Salary" FROM employees;
+SELECT Last_name ||job_id As "Employees" FROM employees;
+SELECT Last_name||'is a'||job_id As "Employee Details" FROM employees;
+SELECT department_id FROM employees;
+SELECT DISTINCT department_id FROM employees;
+SELECT department_Name||q'[Department Manager ID:]'|| MANAGER_ID As "Department and Manager" FROM departments;
+SELECT *from employees;
+SELECT last_name,salary FROM employees;
+SELECT *from departments;
+SELECT employee_id,first_name,salary,department_id FROM employees;
+SELECT job_title from JOBS;
+SELECT DISTINCT job_id, employee_id As "Designation" from employees;
+SELECT last_salary,first_salary,employee_name-whalen As "Name_Salary" from employees; 
+SELECT DISTINCT *from employees where department_Id=20;
+SELECT first_name,department_id from employees where department_id=90;
+SELECT * from employees where manager_id=108;
+SELECT LAST_NAME,job_id,department_id from employees where last_name='Whalen';
+SELECT last_name FROM employees WHERE HIRE_DATE='17-OCT-03';
+SELECT*FROM employees where salary>3000;
+Select employee_id,last_name from employees WHERE job_id='SA_REP';
+SELECT last_name,HIRE_DATE FROM employees WHERE HIRE_DATE<1990;
+SELECT LAST_NAME,SALARY from employees where salary between 250 and 3500;
+SELECT employee_id,last_name,salary,manager_id from employees where manager_id IN(100,101,201);
+SELECT employee_id from employees where hire_date IN('28-sep-97','30-sep-97');
+SELECT FIRST_NAME FROM employees where first_name like'S%';
+SELECT last_name from employees where last_name like'O%';
+SELECT LAST_NAME,MANAGER_ID
+FROM EMPLOYEES
+WHERE MANAGER_ID IS NULL;
